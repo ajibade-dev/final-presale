@@ -42,9 +42,9 @@ export default function HardCap() {
     return (
       <div className="flex flex-col justify-center items-center border-4 border-slate-400 rounded-md px-5 py-10 font-poppins font-semibold leading-10 tracking-wider mx-3 mt-3 md:mt-0 md:mx-0">
         {error ? (
-          <p>Error: {error}</p>
+          <p>Error:<span className="text-[#d55025]"> {error}</span></p>
         ) : (
-          <h1>Hard Cap For Current Stage: {hardCap}BNB</h1>
+          <h1>Hard Cap For Current Stage: <span className="text-[#d55025]"> {hardCap}  BNB</span></h1>
         )}
       </div>
     );

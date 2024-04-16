@@ -44,7 +44,7 @@ export default function TokenRaised() {
         {error ? (
           <p>Error: {error}</p>
         ) : (
-          <h1>Total Token Raised: {tokenRaised}BNB</h1>
+          <h1>Total Token Raised: <span className="text-[#d55025]"> {tokenRaised}  BNB </span></h1>
         )}
       </div>
     );

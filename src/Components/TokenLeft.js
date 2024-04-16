@@ -45,7 +45,7 @@ export default function TokenLeft() {
         {error ? (
           <p>Error: {error}</p>
         ) : (
-          <h1>Remaining Tokens for current stage: {tokenLeft}BLAB</h1>
+          <h1>Remaining Tokens for current stage: <span className="text-[#d55025]"> {tokenLeft}  BLAB </span></h1>
         )}
       </div>
     );

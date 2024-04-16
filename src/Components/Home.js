@@ -88,10 +88,10 @@ export default function Home() {
 
   return (
       <div>
-    <div className="flex flex-row bg-[#07091a] items-center text-white justify-between px-10 py-2">
+    <div className="flex flex-row bg-[#07091a] items-center text-white justify-between px-2 md:px-10 py-2">
       <img src={Bits} />
       {account ? (
-        <div className="px-4 py-2 bg-[#d55025] text-white rounded-xl border-2 border-slate-300">
+        <div className="ml-5 md:ml-0 px-2 md:px-4 py-2 bg-[#d55025] text-white text-center rounded-xl border-2 border-slate-300">
           Connected to {account.slice(0, 6)}...{account.slice(account.length - 4)}
         </div>
       ) : (
@@ -115,7 +115,11 @@ export default function Home() {
             <Claim />
           </div>
         ) : (
-          <button onClick={switchToPreferredNetwork}>Switch Network</button>
+          <div className="flex flex-col items-center justify-center mt-10">
+            <h1 className="text-center md:w-1/2 w-full text-white md:text-2xl text-xl mb-4">Please click the button below to switch to the preferred network</h1>
+              <button className="ml-5 md:ml-0 px-2 md:px-4 py-2 bg-[#d55025] text-white text-center rounded-xl border-2 border-slate-300" onClick={switchToPreferredNetwork}>Switch Network</button>
+          </div>
+          
         )
       ) : null}
     

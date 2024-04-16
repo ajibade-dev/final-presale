@@ -41,7 +41,7 @@ export default function Stage() {
 
   return (
     <div className="flex flex-col justify-center items-center border-4 border-slate-400 rounded-md px-5 py-10 font-poppins font-semibold leading-10 tracking-wider mx-3 mt-3 md:mt-0 md:mx-0">
-      {error ? (<p>Error: {error}</p>) : (<h1>Current Stage: {stage}</h1>)}
+      {error ? (<p>Error: {error}</p>) : (<h1>Current Stage: <span className="text-[#d55025]">{stage}</span></h1>)}
     </div>
   );
 } 

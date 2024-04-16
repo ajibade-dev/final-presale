@@ -61,9 +61,11 @@ export default function Claim() {
     return (
         <div className="flex flex-col justify-center items-center border-4 border-slate-400 rounded-md px-5 py-10 font-poppins font-semibold leading-10 tracking-wider mx-3 mt-3 md:mt-0 md:mx-0">
             {contAddress ? (
-                <button onClick={async () => {
+                <button
+                className="md:mx-3 my-3 md:my-0 mx-1 px-4 py-1 bg-[#d55025] text-white rounded-md border-2 border-white"
+                onClick={async () => {
                     try {
-                      await handleWithdrawClaim({
+                      await withdrawClaimForCurrentStage({
                         onSuccess: handleSuccess,
                         onError: handleError,
                       });
@@ -73,7 +75,7 @@ export default function Claim() {
                     }
                   }}>Withdraw Claim</button>
             ) : (
-                <div>No BLAB to Claim</div>
+                <div className="text-[#d55025]">No BLAB to Claim</div>
             )}
 
             <ToastContainer />

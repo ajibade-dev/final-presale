@@ -101,10 +101,12 @@ export default function Price() {
         </>
       ) : (
         <div>
-          <h1>Current Stage Price: {ethers.utils.formatUnits(price, "ether")} BNB</h1>
-          <h1>Buy Tokens</h1>
-          <input type="number" placeholder="Number of Tokens" onChange={(e) => setNumberOfTokens(parseInt(e.target.value))} />
-          <button onClick={async () => {
+          <h1>Current Stage Price:<span className="text-[#d55025]"> {ethers.utils.formatUnits(price, "ether")} BNB </span></h1>
+          <h1 className="text-[#d55025] text-2xl my-2">Buy Tokens</h1>
+          <input className="border-2 border-[#a35338] text-black rounded-md" type="number" placeholder="Number of Tokens" onChange={(e) => setNumberOfTokens(parseInt(e.target.value))} />
+          <button
+          className="md:mx-3 my-3 md:my-0 mx-1 px-4 py-1 bg-[#d55025] text-white rounded-md border-2 border-white"
+          onClick={async () => {
             try {
               await buyTokens({
                 numberOfTokens,
