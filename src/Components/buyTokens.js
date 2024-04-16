@@ -101,6 +101,7 @@ export default function Price() {
         </>
       ) : (
         <div>
+          <h1>Current Stage Price: {ethers.utils.formatUnits(price, "ether")} BNB</h1>
           <h1>Buy Tokens</h1>
           <input type="number" placeholder="Number of Tokens" onChange={(e) => setNumberOfTokens(parseInt(e.target.value))} />
           <button onClick={async () => {
